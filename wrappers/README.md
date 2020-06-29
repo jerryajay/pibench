@@ -21,3 +21,13 @@ virtual bool remove(const char* key, size_t key_sz) = 0;
 ```
 
 See the `stlmap` folder for an example of a wrapper class using `std::map` as its underlying data structure.
+
+Within the `stlmap` folder type the following command to obtain the shared library .so file:
+```
+gcc -fPIC -shared -rdynamic -std=c++17 stlmap_wrapper.cpp -o stlmap_wrapper.so
+```
+
+From within the `stlmap` folder invoke PiBench as follows:
+```
+./src/PiBench ../wrappers/stlmap/some.so 
+```
