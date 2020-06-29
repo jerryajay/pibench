@@ -31,3 +31,8 @@ From within the `stlmap` folder invoke PiBench as follows:
 ```
 ./src/PiBench ../wrappers/stlmap/some.so 
 ```
+
+If encountering errors such as operation not permitted in the above command, then type:
+```
+sudo !!
+```
